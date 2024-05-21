@@ -19,8 +19,8 @@ def dot_spread(func, left, right, lower_bound, upper_bound, n, pos):
 
 
 def func(x):
-    return np.power(np.sin(np.pi/x), 2)
-func_description = "sin^2(pi/x)"
+    return 2 * np.sqrt(1 - x ** 2)
+func_description = "2sqrt(1 - x^2)"
 '''
 
 def func(x):
@@ -35,12 +35,12 @@ func_description = "e^x"
 # make sure func is vectorized
 
 
-left = 0
+left = -1
 right = 1
 assert left < right
 
-upper_bound = 1
-lower_bound = -1
+upper_bound = 2
+lower_bound = 0
 assert lower_bound < upper_bound
 # we know this because the range of sin is [-1, 1]
 

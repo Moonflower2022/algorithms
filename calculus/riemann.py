@@ -26,30 +26,27 @@ def riemann_trapezoid(func, a, b, n, pos):
         return sum((func(a + i*delta_x) + func(a + (i+1)*delta_x))/2 for i in range(0, n))*delta_x
     return sum(abs((func(a + i*delta_x) + func(a + (i+1)*delta_x))/2) for i in range(0, n))*delta_x
 
-b = 5
-
 '''
 def func(x):
     return math.sin(math.pi/x) ** 2
 func_description = "sin^2(pi/x)"
 '''
 def func(x):
-    return math.sqrt(math.sin(x) ** 2 + (b * math.cos(x)) ** 2)
-func_description = "e^x"
+    return 2 * math.sqrt(1 - x ** 2)
+func_description = "2sqrt(1 - x^2)"
 
-left = 0
-right = 1/2
-n_values = [10000000]
-# [10**(i+1) for i in range(7)]
+left = -1
+right = 1
+n_values = [10**(i+1) for i in range(7)]
 print(n_values)
 print_last = True
 pos = False
 
 func_list = [
-    #riemann_left, 
+    riemann_left, 
     riemann_middle, 
-    #riemann_right, 
-    #riemann_trapezoid
+    riemann_right, 
+    riemann_trapezoid
 ]
 matrix = np.zeros((len(func_list), len(n_values)))
 
