@@ -8,4 +8,4 @@ def generate_prime(min, max, s): # if there are no primes between min and max (i
     return ret
 
 if __name__ == '__main__':
-    print(generate_prime(2 ** 255, 2 ** 256, 17))
+    print(generate_prime(2 ** 255, 2 ** 256, 20))

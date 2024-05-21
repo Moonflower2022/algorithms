@@ -9,13 +9,13 @@ def generate_coprime(n):
 
     return coprime
 
-def miller_rabin(n, s):
+def miller_rabin(n, tests):
     if n == 1 or n == 4:
         return False
     if n < 4:
         return n > 1
 
-    for _ in range(s):
+    for _ in range(tests):
         a = generate_coprime(n)
         if power_modulus(a, n - 1, n) != 1:
             return False
