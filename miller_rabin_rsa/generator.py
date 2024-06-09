@@ -1,5 +1,5 @@
 import random
-from new_primality import miller_rabin
+from miller_rabin import miller_rabin
 
 def generate_prime(min, max, s): # if there are no primes between min and max (inclusive) then the function just freezes
     ret = random.randint(min, max)
