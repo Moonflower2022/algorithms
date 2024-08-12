@@ -2,7 +2,8 @@
 My implementation of some interesting algorithms. 
 
 * optimizers
-  * gradient descent to solve linear and non-linear systems of equations, find roots of functions  
+  * gradient descent to solve linear and non-linear systems of equations, find roots of functions
+  * line search for faster convergence than gradient descent
   * adagrad for faster convergence than gradient descent
   * alberth method for roots of polynomials/maybe other functions
   * my own approximation scheme for minimizing continuous functions
