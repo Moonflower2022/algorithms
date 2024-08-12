@@ -7,6 +7,7 @@ My implementation of some interesting algorithms.
   * adagrad for faster convergence than gradient descent
   * alberth method for roots of polynomials/maybe other functions
   * my own approximation scheme for minimizing continuous functions
+  * genetic algorithm, just for fun
 * area approximation schemes (riemann sums, monte carlo simulations)  
 * euler's method for approximating solutions to differential equations
 * determination of to and from positions for certain subtraction games (CGT)

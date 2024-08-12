@@ -11,8 +11,7 @@ def objective(x):
 
 gradient = grad(objective)
 
-starting_point = np.zeros(10)
-current_point = starting_point
+current_point = np.zeros(10)
 
 tolerance = 0.00000000000000001
 
@@ -26,8 +25,6 @@ while objective(current_point) > tolerance:
 
     learning_rate_results = [objective(current_point - gradient(current_point) * learning_rate) for learning_rate in learning_rate_options]
     current_point -= gradient(current_point) * learning_rate_options[np.argmin(learning_rate_results)]
-
-
 
 
 print("solution:", current_point)
