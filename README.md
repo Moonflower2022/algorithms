@@ -18,4 +18,4 @@ My implementation of some interesting algorithms.
   * insertion sort  
   * merge sort  
   * selection sort  
-* an RSA implementation using the miller rabin primality test (WIP)
+* an RSA implementation using the miller rabin primality test
