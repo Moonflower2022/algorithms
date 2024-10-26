@@ -6,16 +6,19 @@ class StableMatcher:
         that the "a" population has for the "b" population; the ints in the
         lists are indexes
         """
-        self.a_preferences_list = [*a_preferences_list]
-        self.b_preferences_list = [*b_preferences_list]
+        assert len(a_preferences_list) == len(b_preferences_list)
+        for a_preference, b_preference in zip(a_preferences_list, b_preferences_list):
+            assert len(a_preference) == len(b_preference)
 
-        self.a_statuses = [0] * len(a_preferences_list)
-        self.b_front_doors = [[] for _ in range(len(b_preferences_list))]
+        self.a_preferences_list = a_preferences_list
+        self.b_preferences_list = b_preferences_list
 
     def terminated(self):
         return all(len(b_front_door) == 1 for b_front_door in self.b_front_doors)
 
     def start(self):
+        self.a_statuses = [0] * len(self.a_preferences_list)
+        self.b_front_doors = [[] for _ in range(len(self.b_preferences_list))]
         # all "a"s go to most preferable "b"
         for i, preferences in enumerate(self.a_preferences_list):
             self.b_front_doors[preferences[0]].append(i)
