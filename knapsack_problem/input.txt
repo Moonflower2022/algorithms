@@ -1,4 +1,4 @@
 Length: 5
-Values: 1 2 3 4 5
+Values: 6 10 4 11 20
 Weights: 1 2 3 4 5
 Remaining Space: 12

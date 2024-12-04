@@ -118,7 +118,7 @@ Result solve(int length, vector<int> values, vector<int> sizes, int remaining_sp
         result.values.push_back(values[i]);
         best_values = result.values;
         result.sizes.push_back(sizes[i]);
-        best_sizes = result.values;
+        best_sizes = result.sizes;
       }
     }
   }
