@@ -64,6 +64,6 @@ def iterative(n):
     return b
 
 def matrix(n):
-    fibonacci_matrix = np.matrix([[1, 1], [1, 0]], dtype=Decimal)
+    fibonacci_matrix = np.matrix([[1, 1], [1, 0]], dtype=Decimal) # instead of Decimal, can also used dtype=object for some reason
     final_matrix = fractional_matrix_power(fibonacci_matrix, n)
     return int(final_matrix[1, 0])
