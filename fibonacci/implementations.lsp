@@ -15,9 +15,9 @@
       (nth n '(0 1)) ; Base case: return 0 for n = 0, 1 for n = 1
       (+ (recursive-fibonacci (- n 1)) (recursive-fibonacci (- n 2))))) ; Recursive case
 
-(defun fib-func (n &optional (a 1) (b 2))
+(defun fib-func (n &optional (a 0) (b 1))
   (cond
-   ((zerop n) b)
+   ((= n 1) b)
    (t (fib-func (1- n) b (+ a b)))))
 
 (defun closed (n)
