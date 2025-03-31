@@ -19,7 +19,13 @@ if __name__ == "__main__":
 
     if normal_tested == miller_rabin_tested:
         print("Tests return the same result!")
-    else: 
-        df = pd.DataFrame({'i': [i for i in numbers], 'normal_test': normal_tested, 'miller_rabin_test': miller_rabin_tested})
+    else:
+        df = pd.DataFrame(
+            {
+                "i": [i for i in numbers],
+                "normal_test": normal_tested,
+                "miller_rabin_test": miller_rabin_tested,
+            }
+        )
         print(df)
         print("Tests did not return the same result!")

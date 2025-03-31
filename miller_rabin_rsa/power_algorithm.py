@@ -1,8 +1,9 @@
 import time
 
-def power_modulus(x, y, p): # returns x^y % p
+
+def power_modulus(x, y, p):  # returns x^y % p
     residue = 1
-    x = x % p # Take modulo of x if it's larger than p
+    x = x % p  # Take modulo of x if it's larger than p
     while y > 0:
         if y & 1:
             residue = (residue * x) % p
@@ -10,12 +11,13 @@ def power_modulus(x, y, p): # returns x^y % p
         x = (x * x) % p
     return residue
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     start_time = time.time()
     [power_modulus(i, i, 10) for i in range(20, 3000)]
     my_time = time.time() - start_time
     start_time = time.time()
-    [(i ** i) % 10 for i in range(20, 3000)]
+    [(i**i) % 10 for i in range(20, 3000)]
     built_in_time = time.time() - start_time
 
     print("our running time (s):", my_time)
