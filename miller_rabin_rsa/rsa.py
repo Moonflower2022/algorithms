@@ -32,9 +32,9 @@ def int_to_str(num):
     return num.to_bytes((num.bit_length() + 7) // 8, 'big').decode()
 
 def main():
-    p = generate_prime(2 ** 255, 2 ** 256, 20)
+    p = generate_prime(2 ** 255, 2 ** 256)
     print("p:", p)
-    q = generate_prime(2 ** 256, 2 ** 257, 20)
+    q = generate_prime(2 ** 256, 2 ** 257)
     print("q:", q)
 
     n = p * q

@@ -9,7 +9,7 @@ def generate_coprime(n):
 
     return coprime
 
-def miller_rabin(n, tests):
+def is_prime_miller_rabin(n, tests=20):
     if n == 1 or n == 4:
         return False
     if n < 4:
@@ -22,4 +22,5 @@ def miller_rabin(n, tests):
     return True
 
 if __name__ == '__main__':
-    print(miller_rabin(7708429831, 20))
+    number = 1603627217
+    print(f"is_prime({number}): {is_prime_miller_rabin(number)}")
